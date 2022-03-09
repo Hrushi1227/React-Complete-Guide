@@ -16,12 +16,15 @@ const steps = {
 
 const Register = () => {
   const [stepIs, setStep] = useState(1);
-
   const SelectedStepIs = steps[stepIs];
+
+  const incrementStep = () => {
+    setStep(stepIs + 1);
+  };
 
   return (
     <div>
-      <SelectedStepIs />
+      <SelectedStepIs onNextStep={incrementStep} />
     </div>
   );
 };
