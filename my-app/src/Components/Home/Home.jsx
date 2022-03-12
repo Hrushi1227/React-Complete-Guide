@@ -1,20 +1,20 @@
 import React from "react";
 import Card from "../Common/Card/Card";
 import Button from "../Common/Button/Button";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import styles from "./Home.module.css";
 
 const Home = () => {
-  const signInLinkStyle = {
-    color: "#0077ff",
-    fontWeight: "bold",
-    textDecoration: "none",
-    marginLeft: "10px",
-  };
+  // const signInLinkStyle = {
+  //   color: "#0077ff",
+  //   fontWeight: "bold",
+  //   textDecoration: "none",
+  //   marginLeft: "10px",
+  // };
 
   const history = useHistory();
   const startRegister = () => {
-    history.push("/register");
+    history.push("/authenticate");
     console.log("Hello Rushi Clciked ....  ");
   };
 
@@ -28,15 +28,9 @@ const Home = () => {
               your own room or make it public to others
             </p>
           </div>
-          <Button
-            onClickClicked={startRegister}
-            text="Get your username "
-          ></Button>
+          <Button onClickClicked={startRegister} text="Let's Go "></Button>
           <div className={styles.signInWrapper}>
             <span className={styles.hasInvite}>Have an invite text ? </span>
-            <Link style={signInLinkStyle} to="/login">
-              Sign In{" "}
-            </Link>
           </div>
         </div>
       </Card>
