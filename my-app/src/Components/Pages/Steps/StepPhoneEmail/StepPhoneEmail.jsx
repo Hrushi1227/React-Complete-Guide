@@ -8,35 +8,34 @@ const phoneEmailMap = {
   email: Email,
 };
 
-const StepPhoneEmail = ({ incrementStep }) => {
+const StepPhoneEmail = ({ onNext }) => {
   const [type, setType] = useState("phone");
   const Component = phoneEmailMap[type];
 
-  // const incrementStep = () => {
-  //   // setType(type + 1);
-  // };
   return (
     <>
       <div className={styles.cardWrapper}>
         <div>
           <div className={styles.buttonWrap}>
             <button
-              onClick={() => {
-                setType("phone");
-              }}
+              className={`${styles.tabButton} ${
+                type === "phone" ? styles.active : ""
+              }`}
+              onClick={() => setType("phone")}
             >
-              Phone
+              <img src="/images/phone-white.png" alt="phone" />
             </button>
             <button
-              onClick={() => {
-                setType("email");
-              }}
+              className={`${styles.tabButton} ${
+                type === "email" ? styles.active : ""
+              }`}
+              onClick={() => setType("email")}
             >
-              Email
+              <img src="/images/mail-white.png" alt="email" />
             </button>
           </div>
+          <Component onNext={onNext} />
         </div>
-        <Component onNextStep={incrementStep} />
       </div>
     </>
   );

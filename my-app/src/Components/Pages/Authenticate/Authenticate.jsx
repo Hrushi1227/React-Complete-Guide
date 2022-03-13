@@ -8,17 +8,14 @@ const steps = {
 };
 
 const Authenticate = () => {
-  const [stepIs, setStep] = useState(1);
-  const SelectedStepIs = steps[stepIs];
+  const [step, setStep] = useState(1);
+  const Step = steps[step];
 
-  const incrementStep = () => {
-    setStep(stepIs + 1);
-  };
-  return (
-    <div>
-      <SelectedStepIs onNextStep={incrementStep} />
-    </div>
-  );
+  function onNext() {
+    setStep(step + 1);
+  }
+
+  return <Step onNext={onNext} />;
 };
 
 export default Authenticate;

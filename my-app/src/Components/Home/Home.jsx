@@ -11,27 +11,23 @@ const Home = () => {
   //   textDecoration: "none",
   //   marginLeft: "10px",
   // };
-
   const history = useHistory();
-  const startRegister = () => {
+  function startRegister() {
     history.push("/authenticate");
-    console.log("Hello Rushi Clciked ....  ");
-  };
-
+  }
   return (
     <div className={styles.cardWrapper}>
-      <Card title="Welcome to Hrushi Private Meeting Web App " icon="waveHand">
-        <div className={styles.card}>
-          <div>
-            <p className={styles.text}>
-              Welcome to Hrushi Meetings room application here you can create
-              your own room or make it public to others
-            </p>
-          </div>
-          <Button onClickClicked={startRegister} text="Let's Go "></Button>
-          <div className={styles.signInWrapper}>
-            <span className={styles.hasInvite}>Have an invite text ? </span>
-          </div>
+      <Card title="Welcome to Codershouse!" icon="logo">
+        <p className={styles.text}>
+          We’re working hard to get Codershouse ready for everyone! While we
+          wrap up the finishing youches, we’re adding people gradually to make
+          sure nothing breaks
+        </p>
+        <div>
+          <Button onClick={startRegister} text="Let's Go" />
+        </div>
+        <div className={styles.signinWrapper}>
+          <span className={styles.hasInvite}>Have an invite text?</span>
         </div>
       </Card>
     </div>
