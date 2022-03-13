@@ -9,13 +9,13 @@ const steps = {
 
 const Authenticate = () => {
   const [currentStep, setCurrentStep] = useState(1);
-  const Step = steps[currentStep];
+  const SelectedStepis = steps[currentStep];
 
   function incrementStep() {
     setCurrentStep(currentStep + 1);
   }
 
-  return <Step onNextButton={incrementStep} />;
+  return <SelectedStepis onNextButton={incrementStep} />;
 };
 
 export default Authenticate;
