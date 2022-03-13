@@ -11,11 +11,11 @@ const Authenticate = () => {
   const [step, setStep] = useState(1);
   const Step = steps[step];
 
-  function onNext() {
+  function incrementStep() {
     setStep(step + 1);
   }
 
-  return <Step onNext={onNext} />;
+  return <Step onNextButton={incrementStep} />;
 };
 
 export default Authenticate;
