@@ -17,11 +17,10 @@ const Home = () => {
   }
   return (
     <div className={styles.cardWrapper}>
-      <Card title="Welcome to Codershouse!" icon="logo">
+      <Card title="Welcome to Hrushi Web Meetings App!" icon="logo">
         <p className={styles.text}>
-          We’re working hard to get Codershouse ready for everyone! While we
-          wrap up the finishing youches, we’re adding people gradually to make
-          sure nothing breaks
+          Welcome to Hrushi Meetings room application here you can create your
+          own room or make it public to others!
         </p>
         <div>
           <Button onClick={startRegister} text="Let's Go" />

@@ -20,7 +20,7 @@ const Navigation = () => {
     <nav className={`${navStyle.navbar} conatainer`}>
       <Fragment>
         <Link style={brandStyle} to="/">
-          <img src="/images/waveHand.png" alt="waveHand" />
+          <img src="/images/logo.png" alt="logo" />
           <span style={logoText}> Hrushi </span>
         </Link>
       </Fragment>
