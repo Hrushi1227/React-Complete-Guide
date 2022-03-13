@@ -8,11 +8,11 @@ const steps = {
 };
 
 const Authenticate = () => {
-  const [step, setStep] = useState(1);
-  const Step = steps[step];
+  const [currentStep, setCurrentStep] = useState(1);
+  const Step = steps[currentStep];
 
   function incrementStep() {
-    setStep(step + 1);
+    setCurrentStep(currentStep + 1);
   }
 
   return <Step onNextButton={incrementStep} />;
